@@ -1,0 +1,2 @@
+# NextWillBeBetter
+my second repository

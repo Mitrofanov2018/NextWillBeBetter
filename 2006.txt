@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Solution {
+    public static void main (String[] argv) throws IOException
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(in.readLine());
+
+
+
+        int x = Integer.parseInt(st.nextToken());
+
+        int count1 = x/36;
+        int count2;
+        if((x%36)%3==0 || (x%36)%3==1){
+            count2 = (x%36)/3;
+        }
+        else{
+            count2 = (x%36)/3 + 1;
+        }
+        if (count2==12){
+            count1++;
+            count2 = 0;
+        }
+        System.out.println(count1 + " " + count2);
+    }
+}

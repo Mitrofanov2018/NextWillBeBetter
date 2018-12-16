@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+
+
+public class Solution {
+    public static void main (String[] argv) throws IOException
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(in.readLine());
+
+
+
+        int count = Integer.parseInt(st.nextToken());
+
+        BufferedReader in1 = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st1 = new StringTokenizer(in.readLine());
+
+        int min = 10001;
+        int k = 0;
+        for(int i=0; i<count; i++){
+            int x = Integer.parseInt(st1.nextToken());
+            if(x<min){
+                min = x;
+                k = i+1;
+            }
+        }
+
+
+        System.out.println(k);
+    }
+}
